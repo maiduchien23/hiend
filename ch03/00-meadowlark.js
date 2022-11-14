@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8000
 // custom 404 page
 app.use((req, res) => {
     res.type('text/plain')
@@ -14,6 +14,4 @@ app.use((err, req, res, next) => {
     res.status(500)
     res.send('500 - Server Error')
 })
-app.listen(port, () => console.log(
-    `Express started on http://localhost:${port}; ` +
-    `press Ctrl-C to terminate.`))
+app.listen(port, () => console.log(`Express started on http://localhost:${port}; ` + `press Ctrl-C to terminate.`))
