@@ -26,8 +26,8 @@ const server = http.createServer((req, res) => {
         case '/product':
             serveStaticFile(res, '/public/product.html', 'text/html')
             break
-        case '/img/logo.png':
-            serveStaticFile(res, '/public/img/logo.png', 'image/png')
+        case 'ch01/public/img/img.png':
+            serveStaticFile(res, 'ch01/public/img/img.png', 'image/png')
             break
 
         default:
